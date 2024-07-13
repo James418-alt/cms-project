@@ -7,6 +7,14 @@ const HeroModel = new Schema<iHeroData>(
     desc: { type: String },
     btnText: { type: String },
     linkText: { type: String },
+    headercolor: { type: String },
+    desccolor: { type: String },
+    btncolor: { type: String },
+    linkcolor: { type: String },
+    headersize: { type: String },
+    descsize: { type: String },
+    btnsize: { type: String },
+    linksize: { type: String },
   },
   { timestamps: true }
 );

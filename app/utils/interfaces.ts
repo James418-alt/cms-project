@@ -5,6 +5,14 @@ export interface iHero {
   desc: string;
   btnText: string;
   linkText: string;
+  headercolor: string;
+  desccolor: string;
+  btncolor: string;
+  linkcolor: string;
+  headersize: string;
+  descsize: string;
+  btnsize: string;
+  linksize: string;
 }
 
 export interface iHeroData extends iHero, Document {}

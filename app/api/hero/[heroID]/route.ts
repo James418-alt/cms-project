@@ -5,15 +5,36 @@ import { NextRequest, NextResponse } from "next/server";
 export const PATCH = async (req: NextRequest, { params }: any) => {
   try {
     await dbConfig();
-    const { title, desc, linkText, btnText } = await req.json();
+    const {
+      title,
+      desc,
+      btnText,
+      linkText,
+      headercolor,
+      desccolor,
+      btncolor,
+      linkcolor,
+      headersize,
+      descsize,
+      btnsize,
+      linksize,
+    } = await req.json();
     const { heroID } = params;
     const getD = await myHeroModel.findByIdAndUpdate(
       heroID,
       {
         title,
         desc,
-        linkText,
         btnText,
+        linkText,
+        headercolor,
+        desccolor,
+        btncolor,
+        linkcolor,
+        headersize,
+        descsize,
+        btnsize,
+        linksize,
       },
       { new: true }
     );

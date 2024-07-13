@@ -5,8 +5,34 @@ import { NextRequest, NextResponse } from "next/server";
 export const POST = async (req: NextRequest) => {
   try {
     await dbConfig();
-    const { title, desc, linkText, btnText } = await req.json();
-    const getD = await myHeroModel.create({ title, desc, linkText, btnText });
+    const {
+      title,
+      desc,
+      btnText,
+      linkText,
+      headercolor,
+      desccolor,
+      btncolor,
+      linkcolor,
+      headersize,
+      descsize,
+      btnsize,
+      linksize,
+    } = await req.json();
+    const getD = await myHeroModel.create({
+      title,
+      desc,
+      btnText,
+      linkText,
+      headercolor,
+      desccolor,
+      btncolor,
+      linkcolor,
+      headersize,
+      descsize,
+      btnsize,
+      linksize,
+    });
     return NextResponse.json({
       message: "Hero Created",
       status: 200,
