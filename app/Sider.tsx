@@ -60,6 +60,9 @@ const Sider = () => {
             <>
               {items.map((el: any) => (
                 <Link
+                  onClick={() => {
+                    setToggle(false);
+                  }}
                   href={el.url}
                   className="px-3 py-1 cursor-default rounded-md text-[13px] font-semibold text-white"
                   key={el.id}

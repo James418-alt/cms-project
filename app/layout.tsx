@@ -24,7 +24,7 @@ export default async function RootLayout({
         <div className="max-h-full flex max-md:block">
           <Sider />
           <div className="w-full">
-            <div className={`px-10 pb-14 md:px-8 `}>{children}</div>
+            <div className={`px-[50px] pb-14 md:px-8 `}>{children}</div>
           </div>
         </div>
       </body>
