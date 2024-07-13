@@ -6,7 +6,7 @@ export const PATCH = async (req: NextRequest, { params }: any) => {
   try {
     await dbConfig();
     const { title, desc, linkText, btnText } = await req.json();
-    const { heroID } = await params;
+    const { heroID } = params;
     const getD = await myHeroModel.findByIdAndUpdate(
       heroID,
       {

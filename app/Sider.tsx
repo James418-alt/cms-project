@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState, useContext } from "react";
 import { FaLeftRight } from "react-icons/fa6";
 import { MdArrowLeft, MdArrowRight } from "react-icons/md";
@@ -6,10 +7,10 @@ import { MdArrowLeft, MdArrowRight } from "react-icons/md";
 const Sider = () => {
   const [toggle, setToggle] = useState(false);
   const items = [
-    { id: 1, name: "Hero" },
-    { id: 2, name: "Section1" },
-    { id: 3, name: "Section2" },
-    { id: 4, name: "Section3" },
+    { id: 1, name: "Header", url: "/header" },
+    { id: 2, name: "Hero", url: "/hero" },
+    { id: 3, name: "Section1", url: "/section1" },
+    { id: 4, name: "Section2", url: "/section2" },
   ];
   return (
     <div>
@@ -58,12 +59,13 @@ const Sider = () => {
           {toggle && (
             <>
               {items.map((el: any) => (
-                <div
+                <Link
+                  href={el.url}
                   className="px-3 py-1 cursor-default rounded-md text-[13px] font-semibold text-white"
                   key={el.id}
                 >
                   {el.name}
-                </div>
+                </Link>
               ))}
             </>
           )}
