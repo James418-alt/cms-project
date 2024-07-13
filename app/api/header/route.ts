@@ -26,7 +26,7 @@ export const GET = async (req: NextRequest) => {
     await dbConfig();
     const getD = await myHeaderModel.find();
     return NextResponse.json({
-      message: "Hero's Found",
+      message: "Header's Found",
       status: 200,
       data: getD,
     });
