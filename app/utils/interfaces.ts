@@ -15,4 +15,4 @@ export interface iHeader {
   btnText: string;
 }
 
-export interface iHeroData extends iHero, Document {}
+export interface iHeaderData extends iHeader, Document {}

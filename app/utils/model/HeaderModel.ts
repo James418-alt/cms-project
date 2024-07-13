@@ -1,15 +1,15 @@
 import { Schema, model, models } from "mongoose";
-import { iHeroData } from "../interfaces";
+import { iHeaderData, iHeroData } from "../interfaces";
 
-const HeroModel = new Schema<iHeroData>(
+const HeaderModel = new Schema<iHeaderData>(
   {
-    title: { type: String },
-    desc: { type: String },
+    logo: { type: String },
+    navs: { type: [] },
     btnText: { type: String },
-    linkText: { type: String },
   },
   { timestamps: true }
 );
 
-const myHeroModel = models.heros || model<iHeroData>("heros", HeroModel);
-export default myHeroModel;
+const myHeaderModel =
+  models.headers || model<iHeaderData>("headers", HeaderModel);
+export default myHeaderModel;
