@@ -103,6 +103,7 @@ const page = async () => {
                   <div className="flex gap-1 justify-center items-center">
                     <span className="font-light text-[10px]">Color:</span>
                     <input
+                      defaultValue={data?.data[0]?.headercolor}
                       className="w-[20px] h-[20px]"
                       name="headercolor"
                       type="color"
@@ -133,7 +134,7 @@ const page = async () => {
             <div className="border grid md:grid-cols-7 pb-1 items-center">
               <input
                 required
-                defaultValue={data?.data[0]?.title}
+                defaultValue={data?.data[0]?.desc}
                 className="col-span-4  outline-none p-1 rounded-sm placeholder:text-[12px] text-[12px]"
                 type="text"
                 placeholder="Enter your herror title here"
@@ -144,6 +145,7 @@ const page = async () => {
                   <div className="flex gap-1 items-center">
                     <span className="font-light text-[10px]">Color:</span>
                     <input
+                      defaultValue={data?.data[0]?.desccolor}
                       className="w-[20px] h-[20px]"
                       name="desccolor"
                       type="color"
@@ -172,10 +174,9 @@ const page = async () => {
             <div className="border grid md:grid-cols-7 pb-1 items-center">
               <input
                 required
-                defaultValue={data?.data[0]?.title}
+                defaultValue={data?.data[0]?.btnText}
                 className="col-span-4  outline-none p-1 rounded-sm placeholder:text-[12px] text-[12px]"
                 type="text"
-                placeholder="Enter your herror title here"
                 name="btnText"
               />
               <div className="col-span-3 gap-5 pr-3 pl-1">
@@ -183,6 +184,7 @@ const page = async () => {
                   <div className="flex gap-1 items-center">
                     <span className="font-light text-[10px]">Color:</span>
                     <input
+                      defaultValue={data?.data[0]?.btncolor}
                       className="w-[20px] h-[20px]"
                       name="btncolor"
                       type="color"
@@ -211,7 +213,7 @@ const page = async () => {
             <div className="border grid md:grid-cols-7 pb-1 items-center">
               <input
                 required
-                defaultValue={data?.data[0]?.title}
+                defaultValue={data?.data[0]?.linkText}
                 className="col-span-4  outline-none p-1 rounded-sm placeholder:text-[12px] text-[12px]"
                 type="text"
                 placeholder="Enter your herror title here"
@@ -222,6 +224,7 @@ const page = async () => {
                   <div className="flex gap-1 items-center">
                     <span className="font-light text-[10px]">Color:</span>
                     <input
+                      defaultValue={data?.data[0]?.linkcolor}
                       className="w-[20px] h-[20px]"
                       name="linkcolor"
                       type="color"
