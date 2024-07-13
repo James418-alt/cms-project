@@ -24,8 +24,8 @@ const page = async () => {
     const linksize = FormData.get("linksize");
     const heroID = FormData.get("heroID");
     // console.log(desccolor);
-    // const Url = `https://cms-project-seven.vercel.app/api/hero/${heroID}`;
-    const Url = `http://localhost:3001/api/hero/${heroID}`;
+    const Url = `https://cms-project-seven.vercel.app/api/hero/${heroID}`;
+    // const Url = `http://localhost:3001/api/hero/${heroID}`;
 
     await fetch(Url, {
       method: "PATCH",
@@ -43,7 +43,7 @@ const page = async () => {
         btnsize,
         linksize,
       }),
-    }).then(() => redirect("/hero"));
+    });
   };
 
   const formAction = async (FormData: FormData) => {
