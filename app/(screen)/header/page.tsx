@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = async () => {
-  const url = "http://localhost:3000/api/header";
+  const url = "https://cms-project-seven.vercel.app/api/header";
   const res = await fetch(url, { method: "GET", cache: "no-cache" });
   const dd = await res.json();
   const thru = dd.data.length;
@@ -33,7 +33,7 @@ const page = async () => {
     const headerID = formData.get("headerID");
     console.log(headerID);
 
-    const Url = `http://localhost:3000/api/header/${headerID}`;
+    const Url = `https://cms-project-seven.vercel.app/api/header/${headerID}`;
 
     await fetch(Url, {
       method: "PATCH",
@@ -43,7 +43,7 @@ const page = async () => {
     });
   };
   return (
-    <div className="flex flex-col pt-8 gap-3 md:justify-center md:pt-0 items-center h-[100vh]">
+    <div className="flex flex-col pt-8 gap-2 md:justify-center md:pt-0 items-center h-[100vh]">
       <h1 className="font-semibold text-[15px]">Customize Header</h1>
       <form
         action={thru === 0 ? formAction : updateFormAction}
