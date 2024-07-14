@@ -4,11 +4,10 @@ import { iSectionData } from "../interfaces";
 const Section = new Schema<iSectionData>(
   {
     title: { type: String },
-    desc: { type: String },
-    bgImg: { type: String },
-    img: { type: String },
-    link: { type: String },
-    text: { type: String },
+    cards: { type: [] },
+    button: { type: String },
+    titlecolor: { type: String },
+    buttoncolor: { type: String },
   },
   { timestamps: true }
 );

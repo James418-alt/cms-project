@@ -28,11 +28,10 @@ export interface iHeaderData extends iHeader, Document {}
 
 export interface iSection {
   title: string;
-  desc: string;
-  bgImg: string;
-  img: string;
-  link: string;
-  text: string;
+  cards: {}[];
+  button: string;
+  titlecolor: string;
+  buttoncolor: string;
 }
 
 export interface iSectionData extends iSection, Document {}

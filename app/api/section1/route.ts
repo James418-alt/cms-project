@@ -3,14 +3,13 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (req: NextRequest) => {
   try {
-    const { title, desc, bgImg, img, link, text } = await req.json();
+    const { title, cards, button, titlecolor, buttoncolor } = await req.json();
     const getD = await mySectionModel.create({
       title,
-      desc,
-      bgImg,
-      img,
-      link,
-      text,
+      cards,
+      button,
+      titlecolor,
+      buttoncolor,
     });
     return NextResponse.json({
       message: "Section Created",
