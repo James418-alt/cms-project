@@ -55,7 +55,7 @@ const Sider = () => {
             )}
           </div>
         </div>
-        <div className=" h-[100vh] w-  flex flex-col gap-10 items-start p-2">
+        <div className=" h-[100vh] pt-6  flex flex-col gap-10 items-start p-2">
           {toggle && (
             <>
               {items.map((el: any) => (
@@ -64,7 +64,7 @@ const Sider = () => {
                     setToggle(false);
                   }}
                   href={el.url}
-                  className="px-3 py-1 cursor-default rounded-md text-[13px] font-semibold text-white"
+                  className="bg-pink-700 px-3 py-2 cursor-default rounded-md text-[13px] font-semibold text-white w-full flex items-center justify-center "
                   key={el.id}
                 >
                   {el.name}
