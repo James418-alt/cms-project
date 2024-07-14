@@ -3,7 +3,11 @@ import Sider from "./Sider";
 // import Header from "./Header";
 
 const page = () => {
-  return <div>This is the page</div>;
+  return (
+    <div>
+      <h1 className="font-semibold text-[15px]">Wwelcome Admin!</h1>
+    </div>
+  );
 };
 
 export default page;
