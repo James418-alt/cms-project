@@ -10,14 +10,8 @@ const page = () => {
   };
   return (
     <div>
-      <div>
-        <form action={formAct}>
-          <label htmlFor="text">
-            <MdImage />
-          </label>
-          <input id="text" name="text" type="file" hidden />
-          <button>Submit</button>
-        </form>
+      <div className="flex justify-center items-center md:h-[100vh]">
+        <h1 className="font-semibold text-[15px]">Section1 Coming Soon!!</h1>
       </div>
     </div>
   );
