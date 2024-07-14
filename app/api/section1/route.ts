@@ -1,28 +1,25 @@
-import { dbConfig } from "@/app/utils/dbConfig";
-import myHeaderModel from "@/app/utils/model/HeaderModel";
+import mySectionModel from "@/app/utils/model/Section";
 import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (req: NextRequest) => {
   try {
-    await dbConfig();
-    const { logo, navs, btnText, btnColor, btnTsize, navsTextSize } =
-      await req.json();
-    const getD = await myHeaderModel.create({
-      logo,
-      navs,
-      btnText,
-      btnColor,
-      btnTsize,
-      navsTextSize,
+    const { title, desc, bgImg, img, link, text } = await req.json();
+    const getD = await mySectionModel.create({
+      title,
+      desc,
+      bgImg,
+      img,
+      link,
+      text,
     });
     return NextResponse.json({
-      message: "Header Created",
+      message: "Section Created",
       status: 200,
       data: getD,
     });
   } catch (error: any) {
     return NextResponse.json({
-      message: "Error Occured",
+      message: "Error Occured!",
       status: 400,
       error: error.message,
     });
@@ -31,16 +28,15 @@ export const POST = async (req: NextRequest) => {
 
 export const GET = async (req: NextRequest) => {
   try {
-    await dbConfig();
-    const getD = await myHeaderModel.find();
+    const getD = await mySectionModel.find();
     return NextResponse.json({
-      message: "Headers Found",
+      message: "Section Found",
       status: 200,
       data: getD,
     });
   } catch (error: any) {
     return NextResponse.json({
-      message: "Error Occured",
+      message: "Error Occured!",
       status: 400,
       error: error.message,
     });

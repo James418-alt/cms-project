@@ -21,6 +21,18 @@ export interface iHeader {
   logo: string;
   navs: string[];
   btnText: string;
+  btnColor: string;
 }
 
 export interface iHeaderData extends iHeader, Document {}
+
+export interface iSection {
+  title: string;
+  desc: string;
+  bgImg: string;
+  img: string;
+  link: string;
+  text: string;
+}
+
+export interface iSectionData extends iSection, Document {}

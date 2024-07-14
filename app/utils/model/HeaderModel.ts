@@ -1,15 +1,14 @@
-import { Schema, model, models } from "mongoose";
-import { iHeaderData, iHeroData } from "../interfaces";
+import { Schema, model } from "mongoose";
+import { iHeaderData } from "../interfaces";
+import { models } from "mongoose";
 
-const HeaderModel = new Schema<iHeaderData>(
-  {
-    logo: { type: String },
-    navs: { type: [] },
-    btnText: { type: String },
-  },
-  { timestamps: true }
-);
+const HeaderModel = new Schema<iHeaderData>({
+  logo: { type: String },
+  navs: { type: [] },
+  btnText: { type: String },
+  btnColor: { type: String },
+});
 
-const myHeaderModel =
-  models.headers || model<iHeaderData>("headers", HeaderModel);
+const myHeaderModel = models.headers || model("headers", HeaderModel);
+
 export default myHeaderModel;
